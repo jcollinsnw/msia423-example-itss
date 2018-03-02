@@ -36,9 +36,9 @@
             {% endfor %}
          </tbody>
       </table>
-      <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <form action="{{ url_for('add_city') }}" method=post class=add-entry>
       <dl>
-        <input type=text size=15 name=album placeholder="Album">
+        <input type=text size=15 name=city placeholder="City Name">
         <input type=submit value=Add>
       </dl>
     </form>
