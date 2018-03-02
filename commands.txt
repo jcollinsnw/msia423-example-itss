@@ -1,0 +1,9 @@
+COMMANDS
+
+LOCAL MACHINE > eb setenv MAPS_KEY=1c8b6154a823be47409de5099de39726 MSIA_SETTINGS=/opt/python/current/app/config.py
+LOCAL MACHINE > eb printenv
+LOCAL MACHINE > eb ssh
+EB INSTANCE > cd /opt/python/current/app/
+EB INSTANCE > source /opt/python/run/venv/bin/activate
+EB INSTANCE >  source /opt/python/current/env
+EB INSTANCE >  python create_db.py
