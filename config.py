@@ -19,4 +19,3 @@ SQLALCHEMY_DATABASE_URI = "mysql+pymysql://%s:%s@%s/%s" % (
 SQLALCHEMY_POOL_RECYCLE = 3600
 
 WTF_CSRF_ENABLED = True
-SECRET_KEY = os.environ['SECRET_KEY']
