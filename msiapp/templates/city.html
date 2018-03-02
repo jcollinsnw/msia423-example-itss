@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="static/basic.css" rel="stylesheet">
+</head>
+
+<body>
+    <h3>
+         <a href = "{{ url_for('index') }}">Tracks I like</a>
+    </h3>
+
+    <hr/>
+    <table>
+         <thead>
+            <tr>
+               <th>Timestamp</th>
+               <th>Name</th>
+               <th>Country</th>
+               <th>Temperature</th>
+               <th>Max Temp</th>
+               <th>Min Temp</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for city in cities %}
+               <tr>
+                   <td>{{ city.timestamp }}</td>
+                   <td>{{ city.name }}</td>
+                   <td>{{ city.country }}</td>
+                   <td>{{ city.temperature }}</td>
+                   <td>{{ city.max_temp }}</td>
+                   <td>{{ city.min_temp }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <input type=text size=15 name=album placeholder="Album">
+        <input type=submit value=Add>
+      </dl>
+    </form>
+
+</body>
+</html>
